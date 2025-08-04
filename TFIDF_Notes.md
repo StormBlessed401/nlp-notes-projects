@@ -34,11 +34,30 @@ TF(word) = (Number of times word appears in document) / (Total words in document
 **What it tells:**  
 How *rare or unique* the word is across **all** documents.
 
+Words like “the”, “is”, “and” appear in almost every document → they don’t tell us much about the topic.
+
+Words like “photosynthesis” or “neural network” might appear only in specific documents → they are more important.
+
+So we want:
+
+Common words → get small scores
+
+Rare words → get higher scores
+
 **Formula:**
 
 ```
 IDF(word) = log_e (Total number of documents / Number of documents with the word)
 ```
+# Why use Log function:
+ 1. Controls Explosiveness:
+Without log, rare words get huge scores, and common words get tiny scores. This imbalance messes things up.
+ Example: If a word appears in 1 out of 1000 docs → 1000/1 = 1000 -->Too extreme.
+
+With log: 
+log(1000)≈6.9 → much more balanced.
+
+So log flattens the scale, just like a volume knob keeps the music from blasting your ears.
 
 But the formula goes through a slight change that is adding +1 to the actual idf:
 <img width="1153" height="286" alt="image" src="https://github.com/user-attachments/assets/8d9d8c51-e877-4aaa-9a7c-f2730d24d67b" />
