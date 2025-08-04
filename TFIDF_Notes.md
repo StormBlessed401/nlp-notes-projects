@@ -117,4 +117,8 @@ print(tfidf_matrix.toarray())
 <img width="1121" height="240" alt="image" src="https://github.com/user-attachments/assets/4f776b5d-cc12-4b2c-bae0-556187579fe2" />
 
 
+<img width="1153" height="286" alt="image" src="https://github.com/user-attachments/assets/8d9d8c51-e877-4aaa-9a7c-f2730d24d67b" />
+
+
+
 
