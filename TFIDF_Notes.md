@@ -114,6 +114,7 @@ print(vectorizer.get_feature_names_out())
 print(tfidf_matrix.toarray())
 ```
 
+Working example of TF-IDF and how to calculate TF and IDF individually and multiplying them together:
 
 <img width="1183" height="548" alt="image" src="https://github.com/user-attachments/assets/a21ba76b-0483-4444-92b3-d3825f5c4902" />
 
