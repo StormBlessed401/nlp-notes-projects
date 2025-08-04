@@ -164,6 +164,26 @@ This product is awesome! Check it here:
 | Extract hashtags            | `r"#\w+"`           |           |
 | Remove everything but words | `r"[^a-zA-Z\s]"`    |           |
 
+#Use of RE in FEATURE ENGINEERING:
+In Feature Engineering
+You use re to extract meaningful patterns or features from raw data, especially text.
+
+Examples of Feature Engineering using re:
+Extract hashtags, mentions, or URLs
+
+df['hashtags'] = df['tweet'].str.findall(r'#\w+')
+Create a feature: "has email address?"
+
+df['has_email'] = df['text'].str.contains(r'\S+@\S+')
+Count number of digits in a string
+
+df['digit_count'] = df['text'].str.count(r'\d')
+Extract years or specific formats
+
+df['year_mentioned'] = df['text'].str.extract(r'(19\d{2}|20\d{2})')
+Flag presence of specific keywords or patterns
+
+df['contains_warning'] = df['text'].str.contains(r'\b(warning|alert|caution)\b', flags=re.IGNORECASE)
 
 
 
