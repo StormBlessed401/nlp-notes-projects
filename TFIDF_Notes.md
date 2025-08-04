@@ -1,11 +1,11 @@
 
-# 🧠 TF-IDF: Term Frequency – Inverse Document Frequency
+#  TF-IDF: Term Frequency – Inverse Document Frequency
 
 TF-IDF is a technique to evaluate how **important** a word is in a **document**, relative to a **collection of documents** (corpus).
 
 ---
 
-## 🧩 Formula (at a glance)
+## Formula (at a glance)
 
 ```
 TF-IDF = TF * IDF
@@ -13,7 +13,7 @@ TF-IDF = TF * IDF
 
 ---
 
-## ✍️ 1. Term Frequency (TF)
+## 1. Term Frequency (TF)
 **What it tells:**  
 How *frequently* a word appears in a single document.
 
@@ -30,7 +30,7 @@ TF(word) = (Number of times word appears in document) / (Total words in document
 
 ---
 
-## 🌍 2. Inverse Document Frequency (IDF)
+## 2. Inverse Document Frequency (IDF)
 **What it tells:**  
 How *rare or unique* the word is across **all** documents.
 
@@ -50,7 +50,7 @@ But the formula goes through a slight change that is adding +1 to the actual idf
 
 ---
 
-## 📌 Final Meaning of TF-IDF
+## Final Meaning of TF-IDF
 
 - High **TF** → word is important in this doc  
 - High **IDF** → word is unique in the corpus  
@@ -60,7 +60,7 @@ But the formula goes through a slight change that is adding +1 to the actual idf
 
 ---
 
-## 🧪 Example
+## Example
 
 ### 3 documents:
 
@@ -81,7 +81,7 @@ Compute TF-IDF for “Python” in Doc1:
 
 ---
 
-## 🎯 Applications of TF-IDF
+## Applications of TF-IDF
 
 - **Keyword extraction**
 - **Search engines**
@@ -90,7 +90,7 @@ Compute TF-IDF for “Python” in Doc1:
 
 ---
 
-## 🚫 Limitations
+## Limitations
 
 - Doesn’t capture **context or meaning**
 - Ignores **word order**
@@ -101,7 +101,7 @@ For better understanding, explore **Word2Vec**, **BERT**, etc.
 
 ---
 
-## 🛠️ Quick Python Code (with scikit-learn)
+## Quick Python Code (with scikit-learn)
 
 ```python
 from sklearn.feature_extraction.text import TfidfVectorizer
