@@ -186,6 +186,11 @@ Flag presence of specific keywords or patterns
 df['contains_warning'] = df['text'].str.contains(r'\b(warning|alert|caution)\b', flags=re.IGNORECASE)
 
 
+<img width="1026" height="718" alt="image" src="https://github.com/user-attachments/assets/669532ee-7ff9-4264-8d39-13c267271a7d" />
+
+
+
+
 
 
 
