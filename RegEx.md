@@ -1,14 +1,13 @@
-What is re (regular expression)?
+#What is re (regular expression)?
+
 re is Python’s Regular Expressions module. It lets you search, clean, or manipulate text based on patterns.
 
-🔹 Why use it in NLP?
+#Why use it in NLP?
 In text preprocessing, you often need to:
-
-Remove URLs, numbers, special characters, extra spaces, etc.
-
+Remove URLs, numbers, special characters, extra spaces, etc AND
 Replace or extract parts of text using specific rules.
 
-🔹 Example:
+Example:
 text = "I loved this! Check it out: https://example.com"
 cleaned = re.sub(r"http\S+", "", text)  # removes URL
 print(cleaned)  # "I loved this! Check it out: "
@@ -17,7 +16,7 @@ So re is your go-to tool for text cleaning and pattern matching before feeding d
 
 
 Common regular expression (re) Examples in NLP Preprocessing
-✅ 1. Remove URLs
+1. Remove URLs
 import re
 
 text = "Great product! See details at https://www.amazon.com/product/12345"
@@ -25,50 +24,50 @@ cleaned = re.sub(r"http\S+|www\S+", "", text)
 # Output: "Great product! See details at "
 Use case: Many reviews contain links. These are noise for sentiment models.
 
-✅ 2. Remove HTML tags
+2. Remove HTML tags
 text = "Amazing <b>laptop</b> with <i>great battery</i>."
 cleaned = re.sub(r"<.*?>", "", text)
 # Output: "Amazing laptop with great battery."
 Use case: Useful when scraping web content or reading from HTML sources.
 
-✅ 3. Remove Special Characters / Punctuation
+3. Remove Special Characters / Punctuation
 text = "This laptop is AWESOME!!! @#%$^"
 cleaned = re.sub(r"[^a-zA-Z0-9\s]", "", text)
 # Output: "This laptop is AWESOME"
 Use case: Removes noise and irrelevant symbols before analysis.
 
-✅ 4. Remove Numbers
+4. Remove Numbers
 text = "Battery lasted 12 hours and weighs 1.5 kg"
 cleaned = re.sub(r"\d+", "", text)
 # Output: "Battery lasted  hours and weighs . kg"
 Use case: If you're not analyzing numerical info, numbers are often removed.
 
-✅ 5. Lowercase All Text
+5. Lowercase All Text
 text = "Loved It! AMAZING Service."
 cleaned = text.lower()
 # Output: "loved it! amazing service."
 Not re, but usually used with it — ensures consistency in analysis.
 
-✅ 6. Remove Extra Spaces
+6. Remove Extra Spaces
 text = "This   product     is   great"
 cleaned = re.sub(r"\s+", " ", text).strip()
 # Output: "This product is great"
 Use case: Ensures clean formatting.
 
-✅ 7. Keep Only Letters (Remove Everything Else)
+7. Keep Only Letters (Remove Everything Else)
 text = "Wow! 10/10 - would buy again :)"
 cleaned = re.sub(r"[^a-zA-Z\s]", "", text)
 # Output: "Wow would buy again"
 Use case: Keeps only text relevant for word-based models like TF-IDF.
 
-✅ 8. Extract Hashtags or Mentions (from tweets)
+8. Extract Hashtags or Mentions (from tweets)
 text = "I love this product! #happy #Amazon @support"
 hashtags = re.findall(r"#\w+", text)
 # Output: ['#happy', '#Amazon']
 
 mentions = re.findall(r"@\w+", text)
 # Output: ['@support']
-✅ 9. Replace Emoji with Empty String
+9. Replace Emoji with Empty String
 text = "Love it 😍🔥🔥🔥"
 cleaned = re.sub(r"[^\w\s]", "", text)
 # Removes emojis and punctuation
@@ -83,7 +82,6 @@ You can also use libraries like emoji to detect & convert emojis properly if nee
 ***how does --> r"http\S+|www\S+" work?***
 First, what does the r do?
 The r before the string makes it a raw string literal.
-
 It tells Python not to interpret backslashes (\) as escape characters.
 
 Example:
@@ -100,25 +98,22 @@ http: Matches the literal characters http
 
 \S means "any non-whitespace character"
 
-+ means "one or more of the previous"
+AND + means "one or more of the previous"
 
 So http\S+ matches:
-
 http://example.com
-
 https://www.amazon.in/product/B08K2S1B56
-
 httpXYZ123 (basically anything starting with http followed by non-space characters)
 
 | (pipe symbol)
 Acts as OR
 
 So we are saying:
-👉 match anything that looks like http...
+-->match anything that looks like http...
 OR
-👉 match anything that looks like www...
+-->match anything that looks like www...
 
-www\S+
+#www\S+
 Same logic:
 
 www = match the literal string "www"
@@ -168,6 +163,7 @@ This product is awesome! Check it here:
 | Remove extra whitespace     | `r"\s+"`            |           |
 | Extract hashtags            | `r"#\w+"`           |           |
 | Remove everything but words | `r"[^a-zA-Z\s]"`    |           |
+
 
 
 
