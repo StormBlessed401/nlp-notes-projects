@@ -1,4 +1,4 @@
- What is NLTK?
+# What is NLTK?
  
 NLTK stands for Natural Language Toolkit --> it’s a Python library used for working with human language data (text). It's one of the most widely used libraries for basic NLP tasks.
 
@@ -23,6 +23,7 @@ nltk.download('stopwords')
 
 stop_words = set(stopwords.words('english'))
 This code removes common English stopwords from your text like "is", "a", "the", etc.
+
 
 
 
