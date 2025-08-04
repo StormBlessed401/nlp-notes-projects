@@ -110,3 +110,8 @@ tfidf_matrix = vectorizer.fit_transform(docs)
 print(vectorizer.get_feature_names_out())
 print(tfidf_matrix.toarray())
 ```
+
+
+<img width="1183" height="548" alt="image" src="https://github.com/user-attachments/assets/a21ba76b-0483-4444-92b3-d3825f5c4902" />
+
+
