@@ -1,4 +1,4 @@
-#What is re (regular expression)?
+# What is re (regular expression)?
 
 re is Python’s Regular Expressions module. It lets you search, clean, or manipulate text based on patterns.
 
@@ -187,6 +187,7 @@ df['contains_warning'] = df['text'].str.contains(r'\b(warning|alert|caution)\b',
 
 
 <img width="1026" height="718" alt="image" src="https://github.com/user-attachments/assets/669532ee-7ff9-4264-8d39-13c267271a7d" />
+
 
 
 
